@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LinkedIn Track</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        "use strict";
+
+        !(function () {
+            var t = (window.driftt = window.drift = window.driftt || []);
+            if (!t.init) {
+                if (t.invoked)
+                    return void (
+                        window.console &&
+                        console.error &&
+                        console.error("Drift snippet included twice.")
+                    );
+                (t.invoked = !0),
+                    (t.methods = [
+                        "identify",
+                        "config",
+                        "track",
+                        "reset",
+                        "debug",
+                        "show",
+                        "ping",
+                        "page",
+                        "hide",
+                        "off",
+                        "on",
+                    ]),
+                    (t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }),
+                    t.methods.forEach(function (e) {
+                        t[e] = t.factory(e);
+                    }),
+                    (t.load = function (t) {
+                        var e = 3e5,
+                            n = Math.ceil(new Date() / e) * e,
+                            o = document.createElement("script");
+                        (o.type = "text/javascript"),
+                            (o.async = !0),
+                            (o.crossorigin = "anonymous"),
+                            (o.src =
+                                "https://js.driftt.com/include/" + n + "/" + t + ".js");
+                        var i = document.getElementsByTagName("script")[0];
+                        i.parentNode.insertBefore(o, i);
+                    });
+            }
+        })();
+        drift.SNIPPET_VERSION = "0.3.1";
+        drift.load("9rsb4kszx7th");
+
+
+        window.drift.on("emailCapture", function (data) {
+            console.log("user identified as: " + JSON.stringify(data));
+            linkedInClick();
+        });
+
+        function linkedInClick() {
+            var img = document.createElement("img");
+            img.setAttribute("src", "https://px.ads.linkedin.com/collect/?pid=3478442&conversionId=5378882&fmt=gif");
+            document.body.appendChild(img);
+            console.log('clicked', img);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>LinkedIn Tracking</h1>
+
+
+    <!--Insight Tag from LinkedIn-->
+    <script type="text/javascript">
+        _linkedin_partner_id = "3478442";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+        (function (l) {
+            if (!l) {
+                window.lintrk = function (a, b) { window.lintrk.q.push([a, b]) };
+                window.lintrk.q = []
+            }
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript"; b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })(window.lintrk);
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt=""
+            src="https://px.ads.linkedin.com/collect/?pid=3478442&fmt=gif" />
+    </noscript>
+    <!-- End of insight tag code-->
+
+    <!-- LinkedIn Button Click function-->
+    <script>
+        function linkedInClick() {
+            var img = document.createElement("img");
+            img.setAttribute("src", "https://px.ads.linkedin.com/collect/?pid=3478442&conversionId=5378882&fmt=gif");
+            document.body.appendChild(img);
+            console.log('clicked', img);
+        }
+
+    </script>
+</body>
+
+</html>

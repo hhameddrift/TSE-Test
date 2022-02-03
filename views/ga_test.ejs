@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GA + Drift Test</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-186006980-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-186006980-1');
+</script>
+
+<!-- Google Analytics -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-186006980-1', 'auto', 'driftPlaybookFired');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+
+    <!--Drift Install Script-->
+  <script>
+    "use strict";
+
+    !(function () {
+      var t = (window.driftt = window.drift = window.driftt || []);
+      if (!t.init) {
+        if (t.invoked)
+          return void (
+            window.console &&
+            console.error &&
+            console.error("Drift snippet included twice.")
+          );
+        (t.invoked = !0),
+          (t.methods = [
+            "identify",
+            "config",
+            "track",
+            "reset",
+            "debug",
+            "show",
+            "ping",
+            "page",
+            "hide",
+            "off",
+            "on",
+          ]),
+          (t.factory = function (e) {
+            return function () {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }),
+          t.methods.forEach(function (e) {
+            t[e] = t.factory(e);
+          }),
+          (t.load = function (t) {
+            var e = 3e5,
+              n = Math.ceil(new Date() / e) * e,
+              o = document.createElement("script");
+            (o.type = "text/javascript"),
+              (o.async = !0),
+              (o.crossorigin = "anonymous"),
+              (o.src =
+                "https://js.driftt.com/include/" + n + "/" + t + ".js");
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          });
+      }
+    })();
+    drift.SNIPPET_VERSION = "0.3.1";
+    drift.load("9rsb4kszx7th");
+    
+    drift.on('ready', function (api) {
+    drift.on('conversation:playbookFired', function (event) {
+    // Enter Google Analytics function here
+    ga('driftPlaybookFired.send', 'event', {
+      eventCategory: 'Drift Widget',
+      eventAction: 'Playbook Fired',
+      eventLabel: "Playbook ID:" + event.playbookId,
+    });
+  })
+})
+
+  </script>
+</head>
+
+<body>
+  <h1 class="header-title">GA + Drift Testing</h1>
+</body>
+</html>
