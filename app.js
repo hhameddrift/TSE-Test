@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const port = 8000;
+const port = 4000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -51,6 +51,10 @@ app.get("/fastlanegtm", (req, res) => {
 
 app.get("/linkedin", (req, res) => {
   res.render("linkedInTrack");
+});
+
+app.get("/flMarketo", (req, res) => {
+  res.render("fastlaneMarketo.ejs");
 });
 
 app.listen(port, () => {
