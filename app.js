@@ -25,6 +25,11 @@ app.get("/gtmtest", (req, res) => {
   res.render("GTMDriftInstall");
 });
 
+app.get("/apiTesting", (req, res) => {
+  res.render("apiTesting");
+});
+
+
 app.get("/sandbox", (req, res) => {
   res.render("sandbox");
 });
