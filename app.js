@@ -17,8 +17,12 @@ app.get("/identify", (req, res) => {
   res.render("identifyUser");
 });
 
-app.get("/ESMarketo", (req, res) => {
-  res.render("ESMarketo");
+app.get("/marketo", (req, res) => {
+  res.render("marketo");
+});
+
+app.get("/test", (req, res) => {
+  res.render("test");
 });
 
 app.get("/gtmtest", (req, res) => {
