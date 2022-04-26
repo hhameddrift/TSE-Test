@@ -17,8 +17,8 @@ app.get("/identify", (req, res) => {
   res.render("identifyUser");
 });
 
-app.get("/test", (req, res) => {
-  res.render("test");
+app.get("/ESMarketo", (req, res) => {
+  res.render("ESMarketo");
 });
 
 app.get("/gtmtest", (req, res) => {
@@ -29,9 +29,6 @@ app.get("/apiTestingES", (req, res) => {
   res.render("apiTestingES");
 });
 
-app.get("/ESFLMarketo", (req, res) => {
-  res.render("ESFLMarketo");
-});
 
 app.get("/apiTestingES", (req, res) => {
   res.render("apiTestingES");
