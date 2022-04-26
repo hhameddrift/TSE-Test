@@ -25,10 +25,17 @@ app.get("/gtmtest", (req, res) => {
   res.render("GTMDriftInstall");
 });
 
-app.get("/apiTesting", (req, res) => {
-  res.render("apiTesting");
+app.get("/apiTestingES", (req, res) => {
+  res.render("apiTestingES");
 });
 
+app.get("/ESFLMarketo", (req, res) => {
+  res.render("ESFLMarketo");
+});
+
+app.get("/apiTestingES", (req, res) => {
+  res.render("apiTestingES");
+});
 
 app.get("/sandbox", (req, res) => {
   res.render("sandbox");
