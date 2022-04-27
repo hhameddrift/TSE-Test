@@ -13,6 +13,10 @@ app.get("/main", (req, res) => {
   res.render("main.ejs");
 });
 
+app.get("/ESapiTestingGTM", (req, res) => {
+  res.render("GTM.ejs");
+});
+
 app.get("/identify", (req, res) => {
   res.render("identifyUser");
 });
@@ -25,26 +29,11 @@ app.get("/test", (req, res) => {
   res.render("test");
 });
 
-app.get("/gtmtest", (req, res) => {
-  res.render("GTMDriftInstall");
-});
-
-app.get("/apiTestingES", (req, res) => {
-  res.render("apiTestingES");
-});
-
-
-app.get("/apiTestingES", (req, res) => {
-  res.render("apiTestingES");
-});
 
 app.get("/sandbox", (req, res) => {
   res.render("sandbox");
 });
 
-app.get("/fastlane", (req, res) => {
-  res.render("fastlane");
-});
 
 app.get("/iframe", (req, res) => {
   res.render("drift-frame");
@@ -62,9 +51,6 @@ app.get("/fastlanegtm", (req, res) => {
   res.render("fastlaneGtm");
 });
 
-app.get("/linkedin", (req, res) => {
-  res.render("linkedInTrack");
-});
 
 app.get("/flMarketo", (req, res) => {
   res.render("fastlaneMarketo.ejs");
