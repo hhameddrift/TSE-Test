@@ -67,8 +67,25 @@
 </head>
 
 <body>
+  <!--snippet from marketo-->>
+  <!--
   <iframe src="http://www3.lenoxsoft.com/l/326443/2021-10-21/kx6l6" width="100%" height="500" type="text/html"
     frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+-->
+
+<!--snippet from marketo and firing FL-->
+
+    <script src="//844-RKG-112.mktoweb.com/js/forms2/js/forms2.min.js"></script>
+  <form id="mktoForm_1084"></form>
+  <script>MktoForms2.loadForm("//844-RKG-112.mktoweb.com", "844-RKG-112", 1084, function(form) {
+ form.onSuccess(function (values) {
+   drift.api.collectFormData(values, {
+     campaignId: 2546184 // update me with the playbook's campaign id!
+   });
+   return false;
+ });
+});;
+</script>
 </body>
 
 </html>
