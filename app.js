@@ -13,8 +13,8 @@ app.get("/main", (req, res) => {
   res.render("main.ejs");
 });
 
-app.get("/ESapiTestingGTM", (req, res) => {
-  res.render("GTM.ejs");
+app.get("/ESapiTestGTM", (req, res) => {
+  res.render("ESapiTestGTM.ejs");
 });
 
 app.get("/identify", (req, res) => {
@@ -35,9 +35,6 @@ app.get("/sandbox", (req, res) => {
 });
 
 
-app.get("/iframe", (req, res) => {
-  res.render("drift-frame");
-});
 
 app.get("/ga", (req, res) => {
   res.render("ga");
