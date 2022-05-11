@@ -103,33 +103,16 @@
     drift.load("9rsb4kszx7th");
   </script>
 
-<!--GA + Drift Script-->
-  <script>
-    // drift.on("ready", function (api) {
-    //   drift.on("startConversation", function (event) {
-    //     ga("driftConvoTracker.send", "event", {
-    //       eventCategory: "Drift Test",
-    //       eventAction: "conversationStarted",
-    //       eventLabel: event.conversationId,
-    //     });
-    //   });
-    // });
-
     window.drift.on("conversation:playbookFired", function(data) {
     console.log("Playbook fired: " + JSON.stringify(data.playbookId))
 })
 
 
-/*
-ex: 
-Playbook fired: {"conversationId":583998469,"messageId":1430463200,"createdAt":1553021092581,
-"authorId":2487803352,"interactionId":XXX, "playbookId": XXX, "campaignId": XXX}
-*/
   </script>
 </head>
 
 <body>
-  <h1 class="header-title">Ga Test</h1>
+  <h1 class="header-title">Google Analytics Test Site</h1>
 
 
 </body>
