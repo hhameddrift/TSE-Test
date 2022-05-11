@@ -52,6 +52,10 @@ app.get("/flMarketo", (req, res) => {
   res.render("fastlaneMarketo.ejs");
 });
 
+app.get("/marketo", (req, res) => {
+  res.render("marketo.ejs");
+});
+
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });
